@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="Add New Tab"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imageCardView"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialogTitle">
+
+            <ImageView
+                android:id="@+id/tabImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/imageErrorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Required *"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/imageCardView"
+            app:layout_constraintTop_toBottomOf="@+id/imageCardView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageCardView"
+            app:layout_constraintEnd_toEndOf="@+id/imageCardView"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="@+id/imageCardView"
+            app:layout_constraintTop_toTopOf="@+id/imageCardView" />
+
+        <TextView
+            android:id="@+id/addImageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Tab Icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/webTabTitleTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:hint="Tab Title"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:helperText="Required *"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/imageCardView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageCardView"
+            app:layout_constraintTop_toBottomOf="@+id/imageErrorTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/webTabTitleTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/webTabURLTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:hint="Website Link"
+            app:helperText="Required *"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/imageCardView"
+            app:layout_constraintStart_toStartOf="@+id/imageCardView"
+            app:layout_constraintTop_toBottomOf="@+id/webTabTitleTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/webTabURLTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/saveNewTabButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#FFC107"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/webTabURLTextInputLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/webTabURLTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/webTabURLTextInputLayout"
+            app:rippleColor="#000000">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Save"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/addIconAndTextViewGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="imageView,addImageTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

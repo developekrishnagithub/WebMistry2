@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WebMistry" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/statusColor</item>
+    </style>
+
+    <style name="Theme.WebMistry" parent="Base.Theme.WebMistry" />
+    <style name="SplashTheme" parent="Theme.WebMistry">
+        <item name="colorPrimary">@color/statusColor</item>
+        <item name="android:navigationBarColor">@color/statusColor</item>
+    </style>
+</resources>

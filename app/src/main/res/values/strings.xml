@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WebMistry</string>
+    <string name="test_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="app_id">ca-app-pub-9101013122026984~9901068760</string>
+    <string name="test_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_id">ca-app-pub-9101013122026984/8875799695</string>
+    <string name="reword_id">ca-app-pub-9101013122026984/5095464641</string>
+
+    <string name="developerName">\@alagbhaiya</string>
+    <string name="developerInfo">develop by alagBhaiya</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
